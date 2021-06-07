@@ -54,11 +54,10 @@ p{
     color: teal;
     font-size: 16px;
     padding: 0 10px;
+    color: white;
+    padding:5px;
 }
 select:focus, input:focus, button:focus{
     outline: 0;
 }
-.rate{
-    color: white;
-    padding:5px;
-}
+

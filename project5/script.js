@@ -22,6 +22,7 @@ function calculate(){
         amountCurrencyTwo.value = (amountCurrencyOne.value * conversionRate).toFixed(2);
     });
 };
+   
 //Event listner
 //REcalculate exchnage rate when currency one chnages
 currencyOne.addEventListener('change',calculate);
@@ -42,7 +43,6 @@ swap.addEventListener('click', () => {
     //recalculate exchange rate after swap
     calculate();
 })
-
 
 //Excecute calculate function on pase load
 calculate();
