@@ -8,16 +8,74 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;  
 }
 .container{
-    background-color: aquamarine;
+    background-color:lightseagreen;
     border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    width: 600px;
 }
 h1{
     text-align: center;
     margin: 0 0 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 form{
-    padding: 15px 15px;
+    padding: 5px 5px;
+}
+.form-control{
+    margin-bottom: 5px;
+    padding-bottom: 16px;
+    position: relative;
+}
+.form-control label{
+    color:black;
+    display: block;
+    margin-bottom: 3px;
+    font-size: 18px;
+}
+.form-control input{
+    border: 2px solid ;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+}
+.form-control input:focus{
+    outline: 0;
+    border-color: grey;
+}
+
+form button{
+    cursor: pointer;
+    background-color: navy;
+    border: 2px solid navy;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    font-size: 15px;
+    padding: 10px;
+    margin: 10px;
+    width: 95%;
+}
+.form-control select{
+    padding: 10px;
+    font-size: 15px;
+}
+form:hover{
+    background-color: maroon;
+    color: white;
+
+}
+form button:hover{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+form label:hover{
+    color: white;
+    font-size: 30px;
 }
