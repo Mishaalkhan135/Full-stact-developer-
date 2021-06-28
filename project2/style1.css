@@ -25,6 +25,7 @@ h1{
     text-align: center;
     margin: 0 0 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px red;
 }
 form{
     padding: 15px 15px;
