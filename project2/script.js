@@ -23,8 +23,6 @@ function showSuccess(input) {
     const formControl = input.parentElement;
       //Override the class - add success
     formControl.className = 'form-control success';
-    
-
 }
 
 
@@ -45,19 +43,19 @@ form.addEventListener('submit', function(e) {
         showSuccess(email);
      }
      if(address.value === ''){
-        showError(address,'Address is required');
+        showError(address,'Adress is required');
     }else{
         showSuccess(address);
+     }
+     if(contact.value === ''){
+        showError(contact,'Contact no  is required');
+    }else{
+        showSuccess(contact);
      }
      if(password.value === ''){
         showError(password,'Password is required');
     }else{
         showSuccess(password);
-     }
-     if(contact.value === ''){
-        showError(contact,'Contact number is required');
-    }else{
-        showSuccess(contact);
      }
      if(password2.value === ''){
         showError(password2,'ConformPassword is required');
