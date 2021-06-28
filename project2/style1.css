@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+:root{
+    --success-color:green;
+    --error-color:orangered;
+}
 *{
     box-sizing: border-box;
 }
@@ -8,7 +13,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;  
+    min-height: 80vh;  
 }
 .container{
     background-color:lightseagreen;
@@ -22,7 +27,7 @@ h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 form{
-    padding: 5px 5px;
+    padding: 10px 10px;
 }
 .form-control{
     margin-bottom: 5px;
@@ -33,7 +38,8 @@ form{
     color:black;
     display: block;
     margin-bottom: 3px;
-    font-size: 18px;
+    font-size: 30px;
+    padding: 10px;
 }
 .form-control input{
     border: 2px solid ;
@@ -47,7 +53,22 @@ form{
     outline: 0;
     border-color: grey;
 }
-
+.form-control.success input{
+    border-color:var(--success-color);
+}
+.form-control.error input{
+     border-color:var(--error-color);
+}
+.form-control small{
+    color:var(--error-color) ;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    visibility: hidden;
+}
+.form-control.error small{
+    visibility:visible;
+}
 form button{
     cursor: pointer;
     background-color: navy;
@@ -61,13 +82,12 @@ form button{
     width: 95%;
 }
 .form-control select{
-    padding: 10px;
+    padding: 15px;
     font-size: 15px;
 }
 form:hover{
     background-color: maroon;
     color: white;
-
 }
 form button:hover{
     background-color: black;
@@ -78,4 +98,14 @@ form button:hover{
 form label:hover{
     color: white;
     font-size: 30px;
+}
+
+body:hover{
+    background-image: url(../images/pic5.jpg);
+    background-size: cover;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;  
 }

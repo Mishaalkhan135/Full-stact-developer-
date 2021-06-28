@@ -15,6 +15,7 @@ function showError(input, message) {
     const small = formControl.querySelector('small');
     //Overide the the message
     small.innerText = message;
+
 }
 //function to apdate class for success
 function showSuccess(input) {
@@ -23,6 +24,7 @@ function showSuccess(input) {
       //Override the class - add success
     formControl.className = 'form-control success';
     
+
 }
 
 
