@@ -75,7 +75,7 @@ header p {
 }
 .button {
     padding: 15px 25px;
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
     cursor: pointer;
     outline: none;
@@ -108,7 +108,7 @@ button:focus{
 }
 .cta-btn{
     padding: 15px 25px;
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
     cursor: pointer;
     outline: none;
