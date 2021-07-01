@@ -5,6 +5,8 @@
 }
 
 body{
+    background-image: url('../images/pic9.jpg');
+   /* background-size: cover;*/
     font-family: 'Questrial', sans-serif;
     display: flex;
     flex-direction: column;
@@ -54,6 +56,48 @@ h1{
     font-weight: bold;
     margin-left: 10px;
 }
+h1{
+    color: white;
+    box-shadow: 5px 5px 5px red;
+}
+.screen{
+    cursor: pointer;
+    width: 60%;
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px ;
+}
+.controls{
+    background-color:teal;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius:10px ;
+}
+.controls .btn{
+    border:0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.controls .fa-play{
+    color: blue;
+}
+.controls .fa-stop{
+    color:brown;
+}
+.controls .fa-pause{
+    color: white;
+}
+.controls .timestamp{
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
 
 @media(max-width: 800px){
     .screen,.controls{

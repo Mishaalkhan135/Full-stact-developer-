@@ -4,6 +4,7 @@ const play = document.getElementById('play');
 const stop = document.getElementById('stop');
 const progress = document.getElementById('progress');
 const timestamp = document.getElementById('timestamp');
+const volume = document.querySelector('volume');
 //Creat function for clicking on video
 function toggleVideoStatus(){
     if(video.paused){
