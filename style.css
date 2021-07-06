@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+ h1{
+    font-size: 50px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-shadow: 5px 5px 5px red;
+    box-shadow: 5px 5px 5px red;
+    text-align: center;
+}
+.container ul li{
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 3px 3px 3px red;
+    box-shadow: 5px 5px 5px black;
+    color: white;
+}
