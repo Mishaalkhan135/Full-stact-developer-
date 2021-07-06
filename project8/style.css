@@ -1,0 +1,126 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans");
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Open Sans",sans-serif;
+}
+.container nav{
+    width: 100%;
+    height: 100px;
+    background:rgb(37, 77, 110);
+    position: fixed;
+    top: 80px;
+    left: 0;
+    z-index: 999;
+    box-shadow:3px 3px 5px  red;
+}
+
+
+.container nav ul{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    list-style: none;
+    transition: all 0.5s ease;
+}
+.container nav ul li{
+    width: 10%;
+    float: left;
+    text-align: center;
+    color: white;
+    padding:30px 10px 10px 10px;
+    font-size: 23px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    position: relative;
+    text-shadow:2px 2px 3px red;
+
+}
+.container .header{
+    background-image: url("pic13.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.container nav ul li:hover{
+    color: #ea3b50;
+    box-shadow: inset 0 5px  #ea3b50;;
+}
+.container nav ul li ul.sub-nav{
+    position: absolute;
+    background:rgb(37, 77, 110);
+    width: 100%;
+    height: auto;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.14), -1px 0px 1px rgba(0, 0, 0, 0.14);
+    top: 75px;
+    left:0;
+    visibility: hidden;
+    opacity: 0;
+}
+.container nav ul li ul.sub-nav li{
+    color: #eee;
+    font-size: 14px;
+    width: 100%;
+    padding: 15px 0;
+}
+.container nav ul li ul.sub-nav li:hover{
+    color: #ea3b50;
+    box-shadow: 0 0 ;
+}
+.container nav ul li:hover ul.sub-nav{
+    visibility: visible;
+    opacity: 1;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.fa-angle-right{
+    font-size: 15px;
+}
+.sub-menu-2{
+    display: none;
+}
+.hover-me:hover .sub-menu-2{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 100px;
+    width: 100%;
+    background: rgb(37, 77, 110);
+
+}
+.container nav ul li ul.sub-nav li{
+    text-align: left;
+
+}
+h1{
+    box-shadow: 3px 3px 3px red;
+    text-shadow:    3px 3px 5px  red;
+    background-color: black;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.slider{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+h2{
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    text-shadow: 3px 3px 3px red;
+    box-shadow: 3px 3px 5px red;
+}
+p{
+    font-size: 15px;
+    font-family: sans-serif;
+
+}
