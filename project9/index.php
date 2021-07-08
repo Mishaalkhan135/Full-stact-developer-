@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">        
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    
     <link rel="stylesheet" type="text/css" href="engine1/style.css" />
     <script type="text/javascript" src="engine1/jquery.js"></script>
     <title>Novatex Company</title>
 </head>
+
+<style type="text/css">
+@keyframes mymove {
+  from {left: -1000px;}
+  to {left: 1500px;}
+}
+
+    #myCarousel{
+        
+ 
+  margin:  20px auto;
+  position: relative;
+  border: 10px solid brown;
+  box-shadow: 0px 0px 5px 2px #ccc;
+
+    }
+    
+
+
+.slider-img{
+width: 100%;
+height: 100%;
+}
+.item{
+width:100% !important;
+height:77%;
+}
+
+
+</style>
+
+
 <body>
    <div class="container">
      <h1>Novatex Company</h1>
@@ -140,17 +175,45 @@
   
     
     <!-- Start WOWSlider.com BODY section -->
-<div id="wowslider-container1">
-    <div class="ws_images"><ul>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:80%; height:80%; border:10px solid brown;">
+ <div class="carousel-inner">
+    
+                     <?php 
+			$i = 0;
+                        $images = glob('images\*');
+                        foreach($images as $image):
+                    ?>
+                    <?php if($i == 0):?>
+<?php $i++;?>
+<div class="item active">
+                            <img src="<?=$image?>" class="slider-img"/>
 
+                 </div>
+<?php else:?>
+<div class="item">
+                            <img src="<?=$image?>" class="slider-img"/>
 
+                 </div>
+<?php endif;?>
+                    <?php endforeach;?>
 
-            <li><img src="data1/images/pic__copy__copy.jpg" alt="pic - Copy - Copy" title="pic - Copy - Copy" id="wows1_0"/></li>
-            <li><a href="http://wowslider.com/vi"><img src="data1/images/pic4.jpg" alt="cssslider" title="pic4" id="wows1_1"/></a></li>
-            <li><img src="data1/images/pic6.jpg" alt="pic6" title="pic6" id="wows1_2"/></li>
+ 
+  </div>
 
+ <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  </div>
             
-        </ul></div>
+
+
+
+       
         <div class="ws_bullets"><div>
             <a href="#" title="pic - Copy - Copy"><span><img src="data1/tooltips/pic__copy__copy.jpg" alt="pic - Copy - Copy"/>1</span></a>
             <a href="#" title="pic4"><span><img src="data1/tooltips/pic4.jpg" alt="pic4"/>2</span></a>
@@ -191,5 +254,9 @@
         <div class="desc">Dana Of Bottles</div>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
