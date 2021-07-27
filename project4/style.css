@@ -97,8 +97,9 @@ h1{
     font-weight: bold;
     margin-left: 10px;
 }
-
-
+.slider{
+    width: 50px;
+}
 @media(max-width: 800px){
     .screen,.controls{
         width: 90%;

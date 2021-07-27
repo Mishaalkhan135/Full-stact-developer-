@@ -34,6 +34,11 @@ function addData(newUser){
     //Update the dom to display users in the data array
     updateDom();
 }
+//Functions to format randon numbers as money
+/*function formatNumberToDollar(){
+    return number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+
+}*/
 //Update the UI with data from the user data array
 function updateDom(userData = data){
     //Clear previous UI

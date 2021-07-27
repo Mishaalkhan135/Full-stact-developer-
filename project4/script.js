@@ -5,6 +5,8 @@ const stop = document.getElementById('stop');
 const progress = document.getElementById('progress');
 const timestamp = document.getElementById('timestamp');
 const volume = document.querySelector('volume');
+const mutebtn = document.getElementById('mutebtn');
+const volumeslider = document.getElementById('volumeslider');
 //Creat function for clicking on video
 function toggleVideoStatus(){
     if(video.paused){
@@ -45,8 +47,18 @@ function stopVideo(){
 function setVideoProgress(){
     video.currentTime = (+progress.value * video.duration) / 100;
 }
-
-
+function vidmute(){
+    if(video.muted){
+        video.muted = false;
+        mutebtn.innerHTML = "Mute";
+    }else{
+        video.muted = true;
+        mutebtn.innerHTML = "Unmute";
+    }
+}
+function setvolume(){
+    video.volume = volumeslider.value / 100;
+}
 //1.Event listner for clicking on video
 video.addEventListener('click',toggleVideoStatus); 
 video.addEventListener('pause',updatePlayIcon);
@@ -54,7 +66,8 @@ video.addEventListener('play',updatePlayIcon);
 video.addEventListener('timeupdate',updateProgress);
 //2.Evnet listner for play button
 play.addEventListener('click', toggleVideoStatus);
-
+mutebtn.addEventListener('click',vidmute,false);
+volumeslider.addEventListener('click',setvolume,false);
 //3.Event listner for stop button
 stop.addEventListener('click', stopVideo);
 
