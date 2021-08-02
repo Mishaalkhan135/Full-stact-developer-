@@ -5,64 +5,64 @@ const address = document.getElementById('address');
 const contact = document.getElementById('contact');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
-
-function showError(input, message) {
-    //get the parent element of input field(.form-control)
+//All functions
+//function to show error
+function showError(input,message){
     const formControl = input.parentElement;
-    //Override the class - add error
-    formControl.className = 'form-control error'
-    //Get the smaal element for the error message
+    formControl.className = 'form-control error';
     const small = formControl.querySelector('small');
-    //Overide the the message
     small.innerText = message;
-
 }
-//function to apdate class for success
-function showSuccess(input) {
-    //get the parent element of input field(.form-control)
+//function to show success
+function showSuccess(input){
     const formControl = input.parentElement;
-      //Override the class - add success
     formControl.className = 'form-control success';
-    
-
 }
-
-
-//eventlistner
-//create event listner for  submit buttotn
-form.addEventListener('submit', function(e) {
-    //stop page for reloading
+//function to check if emmail is valid
+function isValidEmail(email){
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+//This is a event listner for form on submit button
+form.addEventListener('submit',function(e){
+    //To stop the page from reloading 
     e.preventDefault();
-    //check if user name is empty
-    if(username.value === ''){
+    
+    if(username.value === '' ){
         showError(username,'Username is required');
-    }else{
+    } else{
         showSuccess(username);
-     }
-     if(email.value === ''){
-        showError(email,'Email is required');
-    }else{
-        showSuccess(email);
-     }
-     if(address.value === ''){
-        showError(address,'Address is required');
-    }else{
-        showSuccess(address);
-     }
-     if(password.value === ''){
-        showError(password,'Password is required');
-    }else{
-        showSuccess(password);
-     }
-     if(contact.value === ''){
-        showError(contact,'Contact number is required');
-    }else{
-        showSuccess(contact);
-     }
-     if(password2.value === ''){
-        showError(password2,'ConformPassword is required');
-    }else{
-        showSuccess(password2);
-     }
+    }
 
-});
+    if(email.value === '' ){
+        showError(email,'Email is required');
+    } else if(!isValidEmail(email.value)){
+        showError(email,'Email is invalid');
+    } else{
+        showSuccess(email);
+    }
+
+    if(address.value === '' ){
+        showError(address,'Address is required');
+    } else{
+        showSuccess(address);
+    }
+
+    if(contact.value === '' ){
+        showError(contact,'Contact is required');
+    } else{
+        showSuccess(contact);
+    }
+
+    if(password.value === '' ){
+        showError(password,'Password is required');
+    } else{
+        showSuccess(password);
+    }
+
+    if(password2.value === '' ){
+        showError(password2,'Confirm Password is required');
+    } else{
+        showSuccess(password2);
+    }
+})
